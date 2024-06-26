@@ -274,6 +274,38 @@
             opacity: 0.8;
         }
 
+        .fab-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.fab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.fab:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+.fab img {
+    width: 70%;
+    height: auto;
+}
+
+
         /* Media Queries */
         @media (min-width: 768px) {
             h1 {
@@ -329,6 +361,10 @@
             }
             .performance p {
                 font-size: 0.8em; 
+            }
+
+            .fab {
+                display: none;
             }
         }
     </style>
@@ -407,6 +443,12 @@
         </div>
         <div style="margin-top: 50px;"></div>
     </div>
+
+    <div class="fab-container">
+        <a href="mailto:djaenoe.sa@gmail.com" class="fab fab-email">
+            <img src="icon/messenger.png" alt="Email">
+        </a>
+    </div> 
     
     <script>
         const services = document.querySelectorAll('.service');
