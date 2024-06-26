@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ AENOE - Sonic Artistry Refined</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        nav {
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #aaa;
+        }
+        .flyer {
+            background-color: #000;
+            padding: 100px 60px 60px;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            font-weight: 100;
+        }
+        .tagline {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            opacity: 0.8;
+        }
+        .services {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        .service {
+            padding: 15px 0;
+            font-weight: 300;
+            letter-spacing: 3px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .service:hover {
+            padding-left: 10px;
+            background-color: rgba(255,255,255,0.05);
+        }
+        .cta {
+            display: inline-block;
+            background-color: transparent;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 0.9em;
+            text-decoration: none;
+            border: 1px solid #fff;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 300;
+            margin-top: 20px;
+        }
+        .cta:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        .profile {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(120%);
+            transition: all 0.5s ease;
+        }
+        .profile:hover img {
+            filter: grayscale(0%) contrast(100%);
+            transform: scale(1.05);
+        }
+        .profile::before, .profile::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            animation: lineAnimation 2s infinite;
+        }
+        .profile::after {
+            height: 100%;
+            width: 2px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @keyframes lineAnimation {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        .african-pattern {
+            height: 1px;
+            background: #fff;
+            margin: 40px 0;
+            position: relative;
+        }
+        .african-pattern::before, .african-pattern::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .african-pattern::before { left: 0; }
+        .african-pattern::after { right: 0; }
+        .quote {
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1.1em;
+            margin: 40px 0;
+            padding-left: 20px;
+            border-left: 1px solid #fff;
+        }
+        .social-media {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-media a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .social-media a:hover {
+            color: #aaa;
+        }
+        .social-media img {
+            width: 30px;
+            height: 30px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .social-media a:hover img {
+            filter: grayscale(0%);
+        }
+        .performances {
+            margin-top: 60px;
+            text-align: center;
+        }
+        .performances h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+        }
+        .performance {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .performance:hover {
+            transform: scale(1.05);
+        }
+        .performance img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .performance p {
+            font-size: 1em;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#performances">Performances</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="flyer" id="home">
+        <div class="profile">
+            <img src="files.jpg" alt="DJ Aenoe">
+        </div>
+        <h1>DJ AENOE</h1>
+        <p class="tagline">SONIC ARTISTRY REFINED</p>
+        <div class="african-pattern"></div>
+        <div class="services" id="services">
+            <div class="service">AFROPOLITAN HOUSE FUSION</div>
+            <div class="service">DEEP SONIC JOURNEYS</div>
+            <div class="service">ANCESTRAL RHYTHM INNOVATION</div>
+            <div class="service">BESPOKE AUDIO EXPERIENCES</div>
+        </div>
+        <p class="quote">"Music is the universal language of mankind, transcending boundaries and uniting souls."</p>
+        <a href="#" class="cta">Experience the Sound</a>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+    <div class="performances" id="performances">
+        <h2>Notable Performances</h2>
+        <div class="performance">
+            <img src="https://via.placeholder.com/800x400" alt="Performance 1">
+            <p>DJ AENOE at the Electric Daisy Carnival, captivating thousands with an unforgettable mix of Afro House and Deep Sonic Journeys.</p>
+        </div>
+        <div class="performance">
+            <img src="https://via.placeholder.com/800x400" alt="Performance 2">
+            <p>Immersive soundscapes and ancestral rhythms at the Boom Festival, pushing the boundaries of sonic artistry.</p>
+        </div>
+        <div class="performance">
+            <img src="https://via.placeholder.com/800x400" alt="Performance 3">
+            <p>A mesmerizing fusion of Afropolitan House and bespoke audio experiences at the Amsterdam Dance Event.</p>
+        </div>
+    </div>
+</body>
+</html>
